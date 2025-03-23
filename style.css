@@ -9,10 +9,10 @@
     font-family: sans-serif;
 }
 :root {
-    --bg-color: #080808;
-    --second-bg-color: #0e110f6f;
+    --bg-color: #000000;
+    --second-bg-color: #11111cb;
     --text-color: white;
-    --main-color: #05bfe9;
+    --main-color: #858080;
 }
 html{
     font-size: 62.5%;
