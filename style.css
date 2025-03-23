@@ -10,8 +10,8 @@
 }
 :root {
     --bg-color: #000000;
-    --second-bg-color: #11111cb;
-    --text-color: white;
+    --second-bg-color: #111111cb;
+    --text-color: rgb(255, 255, 255);
     --main-color: #858080;
 }
 html{
@@ -246,13 +246,14 @@ span{
     text-shadow: 0 0 50px var(--main-color);
 }
 .about-img{
-    border-radius: 70%;
+    border-radius: 50%;
 }
 .about-img img{
     position: relative;
-    width: 30vw;
+    height: 35vw;
+    width: 35vw;
     cursor: pointer;
-    border-radius: 30%;
+    border-radius: 50%;
     transition: 0.4s ease-in-out;
     top: 1rem;
     box-shadow: 0 0 30px var(--main-color)
@@ -303,9 +304,57 @@ span{
     background-color: var(--bg-color);
     width: 50px;
 }
+.skills-name{
+    font-size: 18px;
+    font-weight: 700;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.skills-bar{
+    height: 14px;
+    background: #282828;
+    border-radius: 3px;
+}
+.skills-per{
+    height: 14px;
+    background: var(--main-color);
+    border-radius: 3px;
+    position: relative;
+}
+.skills-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: var(--main-color);
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+.skills-per::after{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 10px;
+    background: var(--main-color);
+    top: -20px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+@keyframes fillbarsa{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
 .skills{
     background: var(--bg-color);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .skills h2{
     margin-bottom: 5rem;
@@ -518,7 +567,8 @@ span{
         margin: 0 2rem 4rem;
     }
     .about img{
-        width: 52vw;
+        width: 45vw;
+        height: 45vw;
         margin-top: 1rem;
         margin-bottom: 3rem;
     }
